@@ -36,5 +36,8 @@ class TruthSelector : public SusyNtTruthAna
         virtual void SlaveTerminate(); 
 
 
+}; // class TruthSelector
+
+
 
 #endif
