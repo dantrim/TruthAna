@@ -28,7 +28,7 @@ void TruthSelector::SlaveBegin(TTree* /*tree*/)
 /*--------------------------------------------------------------------------------*/
 // Process - called at each event in the chain
 /*--------------------------------------------------------------------------------*/
-void TruthSelector::Process(Long64_t entry)
+Bool_t TruthSelector::Process(Long64_t entry)
 {
     GetEntry(entry); // c.f. SusyNtAna.h
     clearTruthObjects(); // c.f. SusyNtTruthAna.cxx
@@ -40,6 +40,8 @@ void TruthSelector::Process(Long64_t entry)
              << " event " << setw(6) << nt.evt()->event
              << " sumw= " << nt.evt()->sumw << " ****" << endl;
     }
+
+    return kTRUE;
     
 }
 

@@ -31,9 +31,11 @@ class TruthSelector : public SusyNtTruthAna
         // TSelector methods (inheriting TSelector through SusyNtTruthAna)
         virtual void Begin(TTree *tree);
         virtual void SlaveBegin(TTree *tree);
-        virtual void Process(Long64_t entry);
+        virtual Bool_t Process(Long64_t entry);
         virtual void Terminate();
         virtual void SlaveTerminate(); 
+
+        ClassDef(TruthSelector,1);
 
 
 }; // class TruthSelector
