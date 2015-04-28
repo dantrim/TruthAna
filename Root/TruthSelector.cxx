@@ -485,7 +485,7 @@ bool TruthSelector::selectEvent(const TruthParticleVector& electrons, const Trut
 
     if(nt.evt()->hfor==4) return false;
     
-    if(!((muons.size()==2 || electrons.size()==2) &&
+    if(!(muons.size()==2 || electrons.size()==2 ||
             (electrons.size()+muons.size())==2)) return false;
     
     if(muons.size()==2 && SusyNtAna::Mll(muons[0], muons[1])<20) return false;

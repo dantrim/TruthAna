@@ -16,7 +16,7 @@ struct SortByPt {
 TruthNtupler::TruthNtupler(TString MCID, TString suffix) : 
     SusyNtTools()
 {
-    m_filename = MCID+"_"+suffix+".root";
+    m_filename = suffix+"_"+MCID+".root";
     m_file     = TFile::Open(m_filename,"recreate");
     m_tree     = new TTree("truthNt","truthNt");
     (m_tree)->SetAutoSave(1000000);
