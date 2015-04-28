@@ -83,8 +83,8 @@ void TruthNtupler::BookTree()
     m_tree->Branch("jet2Phi",       &b_jet2Phi, "jet2Phi/F");
 
     // Razor
-    m_tree->Branch("dphi_ll_vBetaT",     &b_dphi_ll_vBetaT, "DPB/F");
-    m_tree->Branch("mDeltaR",            &b_mDeltaR,        "MDR/F");
+    m_tree->Branch("dphi_ll_vBetaT",     &b_dphi_ll_vBetaT, "dphi_ll_vBetaT/F");
+    m_tree->Branch("mDeltaR",            &b_mDeltaR,        "mDeltaR/F");
     m_tree->Branch("R2",                 &b_R2,             "R2/F");
 
 
